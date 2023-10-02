@@ -59,7 +59,7 @@ public TemperatureConverter(Scanner scanner) {
         System.out.println("Введите температуру (Fahrenheit):");
         double tFahrenheit = scanner.nextDouble(); 
         double tCelsius = 0;
-        
+        System.out.println("результат (Farhenheit): %.1f%n", tCelsius);
     }
     
 }

@@ -5,7 +5,9 @@
  */
 package myhometasks;
 
+import tasks.CreateBooksArray;
 import java.util.Scanner;
+import tasks.NumberParser;
 import tasks.TemperatureConverter;
 
 /**
@@ -24,6 +26,7 @@ public class App {
             System.out.println("Выберите задачу:");
             System.out.println("0. Закончить программу:");
             System.out.println("1. Конверетер температуры:");
+            System.out.println("3. создание массива книг:");
             int task = scanner.nextInt(); scanner.nextLine();
             switch(task) {
                 case 0:
@@ -32,20 +35,28 @@ public class App {
                     break;
                 case 1:
                     System.out.println("выбрана задача 1");
-                    NumberParses numberParser = ;
-                    temperatureConverter = new TemperatureConverter(scanner);
-                    temperatureConverter.doConvert();
-                    break;
-                case 2:
-                    System.out.println("выбрана задача 2");
                     TemperatureConverter temperatureConverter;
                     temperatureConverter = new TemperatureConverter(scanner);
                     temperatureConverter.doConvert();
+                    break;    
+                case 2:
+                    System.out.println("выбрана задача 2");
+                    NumberParser numberParser = new NumberParser(scanner);
+                    numberParser.doParse();
                     break;
+                 case 3:
+                    System.out.println("выбрана задача 3");
+                    CreateBooksArray createBooksArray;
+                    createBooksArray = new CreateBooksArray();
+                    createBooksArray.doCreateArray();
+                    break;    
                 default:
                     throw new AssertionError();
         }
     }while(repeat);
     System.out.println("До свидания!");
 }
-}
+
+
+}    
+
